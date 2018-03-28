@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.grbPlayerChoice = new System.Windows.Forms.GroupBox();
-            this.radRockP = new System.Windows.Forms.RadioButton();
-            this.radPaperP = new System.Windows.Forms.RadioButton();
             this.radScissorsP = new System.Windows.Forms.RadioButton();
+            this.radPaperP = new System.Windows.Forms.RadioButton();
+            this.radRockP = new System.Windows.Forms.RadioButton();
             this.grbComputerChoice = new System.Windows.Forms.GroupBox();
             this.radScissorsC = new System.Windows.Forms.RadioButton();
             this.radPaperC = new System.Windows.Forms.RadioButton();
@@ -55,16 +55,16 @@
             this.grbPlayerChoice.TabStop = false;
             this.grbPlayerChoice.Text = "Player\'s Choice";
             // 
-            // radRockP
+            // radScissorsP
             // 
-            this.radRockP.AutoSize = true;
-            this.radRockP.Location = new System.Drawing.Point(6, 34);
-            this.radRockP.Name = "radRockP";
-            this.radRockP.Size = new System.Drawing.Size(51, 17);
-            this.radRockP.TabIndex = 0;
-            this.radRockP.TabStop = true;
-            this.radRockP.Text = "Rock";
-            this.radRockP.UseVisualStyleBackColor = true;
+            this.radScissorsP.AutoSize = true;
+            this.radScissorsP.Location = new System.Drawing.Point(6, 98);
+            this.radScissorsP.Name = "radScissorsP";
+            this.radScissorsP.Size = new System.Drawing.Size(64, 17);
+            this.radScissorsP.TabIndex = 2;
+            this.radScissorsP.TabStop = true;
+            this.radScissorsP.Text = "Scissors";
+            this.radScissorsP.UseVisualStyleBackColor = true;
             // 
             // radPaperP
             // 
@@ -77,16 +77,16 @@
             this.radPaperP.Text = "Paper";
             this.radPaperP.UseVisualStyleBackColor = true;
             // 
-            // radScissorsP
+            // radRockP
             // 
-            this.radScissorsP.AutoSize = true;
-            this.radScissorsP.Location = new System.Drawing.Point(6, 98);
-            this.radScissorsP.Name = "radScissorsP";
-            this.radScissorsP.Size = new System.Drawing.Size(64, 17);
-            this.radScissorsP.TabIndex = 2;
-            this.radScissorsP.TabStop = true;
-            this.radScissorsP.Text = "Scissors";
-            this.radScissorsP.UseVisualStyleBackColor = true;
+            this.radRockP.AutoSize = true;
+            this.radRockP.Location = new System.Drawing.Point(6, 34);
+            this.radRockP.Name = "radRockP";
+            this.radRockP.Size = new System.Drawing.Size(51, 17);
+            this.radRockP.TabIndex = 0;
+            this.radRockP.TabStop = true;
+            this.radRockP.Text = "Rock";
+            this.radRockP.UseVisualStyleBackColor = true;
             // 
             // grbComputerChoice
             // 
@@ -164,6 +164,7 @@
             this.lblOutcome.Size = new System.Drawing.Size(47, 13);
             this.lblOutcome.TabIndex = 6;
             this.lblOutcome.Text = "It\'s a Tie";
+            this.lblOutcome.Visible = false;
             // 
             // frmRockPaperScissors
             // 

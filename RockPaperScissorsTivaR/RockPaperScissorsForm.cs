@@ -29,6 +29,8 @@ namespace RockPaperScissorsTivaR
         {
             InitializeComponent();
 
+            //Hide the winners text initially
+            lblOutcome.Hide();
             // Creating Random Number Object
             randomNumberGenerator = new Random();
         }
@@ -67,13 +69,59 @@ namespace RockPaperScissorsTivaR
             {
                 this.radRockC.Checked = true;
             }
-            else if (computerChoice == paper) ;
+            else if (computerChoice == paper) 
             {
-
+                this.radPaperC.Checked = true;
+            }
+            else if (computerChoice == scissors)
+            {
+                this.radScissorsC.Checked = true;
             }
 
-           
+            // Display the end result
+            this.lblOutcome.Show(); 
+            // To compare and see who won
+            // Rock
+            if (computerChoice == rock && playerChoice == rock)
+            {
+                lblOutcome.Text = "It's a tie";
+            }
+            if (computerChoice == rock && playerChoice == paper)
+            {
+                lblOutcome.Text = "You Win!";
+            }
+            if (computerChoice == rock && playerChoice == scissors)
+            {
+                lblOutcome.Text = "Computer Wins";
+            }
 
+            // Paper outcomes
+            if (computerChoice == paper && playerChoice == rock)
+            {
+                lblOutcome.Text = "Computer Wins";
+            }
+            if (computerChoice == paper && playerChoice == paper)
+            {
+                lblOutcome.Text = "It's a tie";
+            }
+            if (computerChoice == paper && playerChoice == scissors)
+            {
+                lblOutcome.Text = "You Win!";
+            }
+
+            // Scissors Outcomes
+            if (computerChoice == scissors && playerChoice == rock)
+            {
+                lblOutcome.Text = "You Win!";
+            }
+            if (computerChoice == scissors && playerChoice == paper)
+            {
+                lblOutcome.Text = "Computer Wins";
+            }
+            if (computerChoice == scissors && playerChoice == scissors)
+            {
+                lblOutcome.Text = "It's a tie";
+            }
         }
     }
 }
